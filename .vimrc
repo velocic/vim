@@ -428,3 +428,7 @@ nnoremap <c-up> :m-2<CR>
 nnoremap <c-down> :m+<CR>
 vnoremap <c-up> :m-2<CR>gv
 vnoremap <c-down> :m'>+<CR>gv
+nnoremap <c-k> :m-2<CR>
+nnoremap <c-j> :m+<CR>
+vnoremap <c-k> :m-2<CR>gv
+vnoremap <c-j> :m'>+<CR>gv
