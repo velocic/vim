@@ -127,6 +127,7 @@ set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
+    autocmd GUIEnter * set vb t_vb=
     set guioptions-=T
     set guioptions+=e
     set t_Co=256
