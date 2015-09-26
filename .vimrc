@@ -398,7 +398,7 @@ endfunction
 execute pathogen#infect()
 
 "Custom colorscheme
-colorscheme cobalt
+colorscheme cobaltish
 
 "Custom keybindings and settings
 set number
