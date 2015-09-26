@@ -403,12 +403,17 @@ colorscheme cobaltish
 "Custom keybindings and settings
 set number
 set nowrap
+set splitright
 let mapleader = ","
 nmap <leader>r :TagbarToggle<CR>
 nmap <leader>p :CtrlP<CR>
+nmap <leader>] :CtrlPTag<CR>
+nmap <A-]> :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 vnoremap <leader>/ :TComment<cr>gv
 nnoremap <leader>/ :TComment<cr>
+" set vim to load a local ctags file named 'tags'
+set tags+=./tags
 " map block indent, outdent to tab
 nnoremap <tab> V>
 nnoremap <s-tab> V<
