@@ -128,8 +128,13 @@ set background=dark
 " Set extra options when running in GUI mode
 if has("gui_running")
     autocmd GUIEnter * set vb t_vb=
+    set guioptions-=m
     set guioptions-=T
-    set guioptions+=e
+    set guioptions-=r
+    set guioptions-=L
+    set guioptions+=c
+    set guioptions-=e
+    " set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Monaco:h15
