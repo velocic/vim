@@ -437,3 +437,7 @@ nnoremap <c-k> :m-2<CR>
 nnoremap <c-j> :m+<CR>
 vnoremap <c-k> :m-2<CR>gv
 vnoremap <c-j> :m'>+<CR>gv
+
+" Resize split up or down by half its' current size
+nnoremap <silent> + :exe 'vertical resize'. string(&columns * 0.75)<CR>
+nnoremap <silent> - :exe 'vertical resize'. string(&columns * 0.25)<CR>
