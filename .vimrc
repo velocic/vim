@@ -445,6 +445,6 @@ nnoremap <silent> - :exe 'vertical resize'. string(&columns * 0.25)<CR>
 " Set up a few hotkeys for color schemes. Note: F1 is mapped to :help by default
 nnoremap <F1> :colorscheme cobaltish<CR>
 nnoremap <F2> :colorscheme iceberg<CR>
+nnoremap <F3> :colorscheme luna<CR>
 "F3 and F4 just being reserved for later colorschemes
-nnoremap <F3> :colorscheme cobaltish<CR>
 nnoremap <F4> :colorscheme cobaltish<CR>
