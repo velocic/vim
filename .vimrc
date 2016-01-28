@@ -404,7 +404,7 @@ endfunction
 execute pathogen#infect()
 
 "Custom colorscheme
-colorscheme cobaltish
+colorscheme luna
 
 "Custom keybindings and settings
 set number
