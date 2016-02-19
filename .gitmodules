@@ -28,3 +28,6 @@
 [submodule "bundle/glsl.vim"]
 	path = bundle/glsl.vim
 	url = https://github.com/beyondmarc/glsl.vim.git
+[submodule "bundle/vim-kivy"]
+	path = bundle/vim-kivy
+	url = https://github.com/farfanoide/vim-kivy.git
