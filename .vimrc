@@ -410,6 +410,10 @@ colorscheme luna
 set number
 set nowrap
 set splitright
+"Use indentation for folding, but leave folds open by default
+set foldmethod=indent
+set nofoldenable
+
 let mapleader = ","
 nmap <leader>r :TagbarToggle<CR>
 nmap <leader>p :CtrlP<CR>
