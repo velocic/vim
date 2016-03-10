@@ -411,7 +411,7 @@ set number
 set nowrap
 set splitright
 "Use indentation for folding, but leave folds open by default
-set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
 
 let mapleader = ","
