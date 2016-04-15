@@ -138,6 +138,13 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Monaco:h15
+
+    " Trying to get godot to launch gvim on a specific monitor
+    let godotWithVim=$GODOT_WITH_VIM
+    if godotWithVim == '1'
+        autocmd GUIEnter * winpos 3840 0
+    endif
+
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
