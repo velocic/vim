@@ -147,6 +147,11 @@ if has("gui_running")
 
 endif
 
+" Fix for csapprox with gnome terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -324,13 +329,13 @@ map <leader>p :cp<cr>
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+" map <leader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+" map <leader>sn ]s
+" map <leader>sp [s
+" map <leader>sa zg
+" map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -452,6 +457,9 @@ vnoremap <c-j> :m'>+<CR>gv
 " Resize split up or down by half its' current size
 nnoremap <silent> + :exe 'vertical resize'. string(&columns * 0.75)<CR>
 nnoremap <silent> - :exe 'vertical resize'. string(&columns * 0.25)<CR>
+
+" Hotkey to drop to a terminal shell from terminal vim
+nnoremap <leader>s :sh<CR>
 
 " Set up a few hotkeys for color schemes. Note: F1 is mapped to :help by default
 nnoremap <F1> :colorscheme cobaltish<CR>
