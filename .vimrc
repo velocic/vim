@@ -137,7 +137,7 @@ if has("gui_running")
     " set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set guifont=Droid\ Sans\ Mono\ 12
+    set guifont=Deja\ Vu\ Sans\ Mono\ 12
 endif
 
 " Fix for csapprox with gnome terminal
