@@ -138,7 +138,6 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Monaco:h15
-
 endif
 
 " Fix for csapprox with gnome terminal
@@ -382,3 +381,16 @@ nnoremap <F2> :colorscheme iceberg<CR>
 nnoremap <F3> :colorscheme luna<CR>
 "F3 and F4 just being reserved for later colorschemes
 nnoremap <F4> :colorscheme cobaltish<CR>
+
+"Experimental ConqueGDB integration
+let g:ConqueGdb_Leader = '<space>'
+
+"Shortcuts for yanking the filename	
+" Convert slashes to backslashes for Windows.
+if has('win32')
+  nmap ,cf :let @*=substitute(expand("%"), "/", "\\", "g")<CR>
+  nmap ,cl :let @*=substitute(expand("%:p"), "/", "\\", "g") . ':' . line(".")<CR>
+else
+  nmap ,cf :let @+=expand("%:p")<CR>
+  nmap ,cl :let @+=expand("%:p") . ':' . line(".")<CR>
+endif
