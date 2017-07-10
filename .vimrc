@@ -394,3 +394,7 @@ else
   nmap ,cf :let @+=expand("%:p")<CR>
   nmap ,cl :let @+=expand("%:p") . ':' . line(".")<CR>
 endif
+
+"Switch all open windows to diff mode
+nnoremap <leader>d :diffthis<CR>
+nnoremap <leader>D :diffoff!<CR>
