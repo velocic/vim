@@ -1,0 +1,24 @@
+" Settings
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set magic
+set showmatch
+set mat=2
+set relativenumber
+set nowrap
+set splitright
+
+" Keybindings
+let mapleader = ","
+nmap <leader>w :w!<cr>
+vnoremap <silent> * :call VisualSelection('f')<CR>
+
+" Keybinds for Android Studio specific things
+" Toggle the Project Explorer pane
+nnoremap <leader>n :action ToggleProject<cr>
+nnoremap <leader>r :action FileStructurePopup<cr>
+nnoremap <leader>p :action GotoFile<cr>
+vnoremap <leader>/ :action CommentByBlockComment<cr>
+nnoremap <leader>/ :action CommentByLineComment<cr>
