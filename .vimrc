@@ -332,7 +332,7 @@ execute pathogen#infect()
 colorscheme luna
 
 "Custom keybindings and settings
-set number
+set number relativenumber
 set nowrap
 set splitright
 "Use indentation for folding, but leave folds open by default
@@ -398,3 +398,6 @@ endif
 "Switch all open windows to diff mode
 nnoremap <leader>d :diffthis<CR>
 nnoremap <leader>D :diffoff!<CR>
+
+"Remove limit for ctrlp file parsing
+let g:ctrlp_max_files = 0

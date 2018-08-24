@@ -9,6 +9,7 @@ set mat=2
 set relativenumber
 set nowrap
 set splitright
+set so=4
 
 " Keybindings
 let mapleader = ","
