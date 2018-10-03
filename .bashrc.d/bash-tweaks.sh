@@ -1,3 +1,14 @@
+# Launch a customized gdb debugging window with tmux & voltron
+debug()
+{
+    tmux new -s gdb-session -d gdb $1
+    tmux split-window -vb "voltron view disasm"
+    tmux split-window -t 0 -h "voltron view command 'info locals' --lexer cpp"
+    tmux resize-pane -t 2 -U 10
+    tmux select-pane -t 2
+    tmux attach -t gdb-session
+}
+
 # More easily search for c++ std library features from man pages (if already installed via stdman on github: https://github.com/jeaye/stdman.git
 ref()
 {

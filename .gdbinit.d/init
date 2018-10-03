@@ -1,0 +1,11 @@
+dashboard -layout source
+
+dashboard source -style context 15
+
+define hookpost-up
+dashboard
+end
+
+define hookpost-down
+dashboard
+end
