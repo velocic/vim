@@ -1,0 +1,14 @@
+*****Linux Hex Editing Tools*****
+okteta -- gui hex editor using KDE
+
+*******Speeding up searches with gnu parallel********
+find . -type f | parallel -k -j150% -n 1000 -m grep -HIin "search text" {}
+
+*******Enable second monitor from the terminal with xrandr*****
+xrandr --output {monitor-id found through xrandr w/o args} --mode {resolution, i.e. 1920x1080} --rate {rate in hz, i.e. 60} --right-of {other-monitor-id to orient to the right-side of}
+
+sshfs -- remote mount ssh connection to local filesystem; sshfs user@destination:/your/path/to/home/dir /local/mount/dir
+fusermount -- management for locally mounted filesystems; use fusermount -u /local/mount-dir to unmount sshfs mount points
+
+******grab a large directory remotely, efficiently using rsync******
+rsync -avzhe ssh user@ssh-addres:/path/to/target/directory /path/to/local/destination
