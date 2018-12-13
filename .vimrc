@@ -350,6 +350,10 @@ nnoremap <leader>/ :TComment<cr>
 " set vim to load a local ctags file named 'tags'
 set tags+=./tags
 
+" set relative line numbers in nerdtree
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
 " map block indent, outdent to tab
 nnoremap <tab> V>
 nnoremap <s-tab> V<

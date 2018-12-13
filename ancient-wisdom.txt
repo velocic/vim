@@ -12,3 +12,15 @@ fusermount -- management for locally mounted filesystems; use fusermount -u /loc
 
 ******grab a large directory remotely, efficiently using rsync******
 rsync -avzhe ssh user@ssh-addres:/path/to/target/directory /path/to/local/destination
+
+******Profiling*****
+valgrind for checking cache misses, memory errors, and more
+visualizers:
+    kcachegrind (valgrind --tool=callgrind) -- call graph, cache misses
+    massif visualizer (valgrind --tool=massif) -- heap profiler (measures memory usage)
+
+heaptrack - (https://github.com/KDE/heaptrack) another (standalone) heap profiler.
+    looks extremely thorough. Tracks memory leaks as well, sorts things by amount
+    of memory they allocate. Seems very useful for performance in addition to correctness.
+            
+    

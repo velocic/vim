@@ -40,3 +40,9 @@
 [submodule "bundle/csapprox"]
 	path = bundle/csapprox
 	url = https://github.com/godlygeek/csapprox.git
+[submodule "vim-qml"]
+	path = vim-qml
+	url = https://github.com/peterhoeg/vim-qml
+[submodule "bundle/vim-qml"]
+	path = bundle/vim-qml
+	url = https://github.com/peterhoeg/vim-qml

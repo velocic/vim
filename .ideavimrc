@@ -7,6 +7,7 @@ set magic
 set showmatch
 set mat=2
 set relativenumber
+set number
 set nowrap
 set splitright
 set so=4
