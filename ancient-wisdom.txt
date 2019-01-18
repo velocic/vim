@@ -22,5 +22,12 @@ visualizers:
 heaptrack - (https://github.com/KDE/heaptrack) another (standalone) heap profiler.
     looks extremely thorough. Tracks memory leaks as well, sorts things by amount
     of memory they allocate. Seems very useful for performance in addition to correctness.
-            
-    
+
+*****GDB debug symbols when debugging on a different machine than the one that compiled the project*****
+within gdb, use "set substitute-path {from} {to}"
+
+From https://sourceware.org/gdb/onlinedocs/gdb/Source-Path.html#set-substitute_002dpath :
+
+For example, if the file /foo/bar/baz.c was moved to /mnt/cross/baz.c, then the command
+(gdb) set substitute-path /foo/bar /mnt/cross
+will tell GDB to replace ‘/foo/bar’ with ‘/mnt/cross’, which will allow GDB to find the file baz.c even though it was moved. 
