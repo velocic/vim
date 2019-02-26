@@ -23,6 +23,16 @@ heaptrack - (https://github.com/KDE/heaptrack) another (standalone) heap profile
     looks extremely thorough. Tracks memory leaks as well, sorts things by amount
     of memory they allocate. Seems very useful for performance in addition to correctness.
 
+******Static Analysis Tools******
+clang-tidy - great linter with a ton of optional checkers, can suggest modern practices & performance hints.
+             can also automatically apply linting changes for you, if you want.
+scanbuild - is a command line utility that enables a user to run the static analyzer over their codebase as
+            part of performing a regular build. the static analyzers are the clang static analyzer suite.
+            this tool doesn't know about your build rules (include paths, lib paths, etc), however that
+            information can be exported from CMake.
+cppcheck - another open-source stand-alone static analysis tool. comes highly recommended within the C++ community
+           comes with cppcheck-htmlreport, which can generate an easy to navigate html files to visualize the results
+
 *****GDB debug symbols when debugging on a different machine than the one that compiled the project*****
 within gdb, use "set substitute-path {from} {to}"
 
