@@ -10,8 +10,18 @@ initializeWacomTabletConfig()
 {
     #TODO: If top mouse button isn't mapped to anything by default, perhaps use it to control
     # drawing mask
-    #TODO: configure the tablet buttons on the left to useful blender controls
-    xsetwacom set 21 MapToOutput 1920x1080+1920+0
-    xsetwacom set 21 TabletPCButton on
+
+    #Stylus config options
+    xsetwacom set 16 MapToOutput 1920x1080+1920+0
+    xsetwacom set 16 TabletPCButton on
+
+    #Tablet button config options
+    xsetwacom set 17
+
+    #Set the button inside the scroll wheel to tab
+    xsetwacom set 17 Button 13 "key tab"
+
+    #Set the top button of the lower 4 button group to "z"
+    xsetwacom set 17 Button 9 "key z"
 }
 
