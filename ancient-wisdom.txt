@@ -17,6 +17,10 @@ rsync -avzhe ssh user@ssh-addres:/path/to/target/directory /path/to/local/destin
 valgrind for checking cache misses, memory errors, and more
 visualizers:
     kcachegrind (valgrind --tool=callgrind) -- call graph, cache misses
+        - if you need to start an application, but only want to profile a specific behavior, you can start callgrind with instrumentation
+        disabled at startup (valgrind --tool=callgrind --instr-atstart=no {executable name}). When you're ready to enable profiling,
+        you can turn on using the program callgrind_control (callgrind_control -i on)
+
     massif visualizer (valgrind --tool=massif) -- heap profiler (measures memory usage)
 
 heaptrack - (https://github.com/KDE/heaptrack) another (standalone) heap profiler.
