@@ -45,3 +45,8 @@ From https://sourceware.org/gdb/onlinedocs/gdb/Source-Path.html#set-substitute_0
 For example, if the file /foo/bar/baz.c was moved to /mnt/cross/baz.c, then the command
 (gdb) set substitute-path /foo/bar /mnt/cross
 will tell GDB to replace ‘/foo/bar’ with ‘/mnt/cross’, which will allow GDB to find the file baz.c even though it was moved. 
+
+
+*****List environment variables used by some running process*****
+First, get the pid of the target process (pidof {process-name})
+cat /proc/{pid-of-target-process}/environ
