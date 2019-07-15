@@ -37,6 +37,18 @@ scanbuild - is a command line utility that enables a user to run the static anal
 cppcheck - another open-source stand-alone static analysis tool. comes highly recommended within the C++ community
            comes with cppcheck-htmlreport, which can generate an easy to navigate html files to visualize the results
 
+*****Attach GDB client to GDB server on a remote target*****
+start gdb server on the target first
+gdbserver :{port-to-listen-on} {path-to-debug-binary}
+
+start gdb client on the host device with an IDENTICAL binary to the one on the target
+gdb {path-to-debug-binary}
+
+in gdb console, attach to the gdbserver
+target remote {ip address of target device}:{port-gdbserver-is-listening-on}
+
+then follow instructions for setting substitute path below so that paths match properly for debug symbols
+
 *****GDB debug symbols when debugging on a different machine than the one that compiled the project*****
 within gdb, use "set substitute-path {from} {to}"
 
